@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Login from "./components/Login";
+import Main from "./Main.js";
 
-function App() {
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
+import "./App.css";
+
+const App = () => {
+  const [auth, setAuth] = useState(false);
+  useEffect(() => {
+    console.log("auth", auth);
+  }, [auth]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!auth ? <Login auth={auth} setAuth={setAuth} /> : <Main />}
     </div>
   );
-}
+};
 
 export default App;
