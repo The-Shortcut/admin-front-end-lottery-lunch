@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBBtn, MDBInput } from "mdbreact";
+import { MDBBtn} from "mdbreact";
 
 const SearchedItem = (props) => {
   const handleDeleteUser = () => {
@@ -10,13 +10,18 @@ const SearchedItem = (props) => {
       props.deleteByName();
     }
   };
+  
   return (
     <div>
       <h3>Searched email </h3>
-      {props.searchName &&
-      <MDBBtn onClick={() => handleDeleteUser()} color="danger">
-        Delete User
-      </MDBBtn>}
+      {props.searchfromDb && (
+        <div>
+          {props.searchName}
+          <MDBBtn onClick={() => handleDeleteUser()} color='danger'>
+            Delete User
+          </MDBBtn>
+        </div>
+      )}
     </div>
   );
 };

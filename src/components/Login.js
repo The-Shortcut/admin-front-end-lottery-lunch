@@ -21,61 +21,57 @@ const Login = (props) => {
   const handleAuth = () => {
     const value = props.auth;
     props.setAuth(!value);
-    console.log("value ", value);
   };
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    //const { usersJson, userName, password } = this.state;
+
     const filterUserName = Object.keys(usersJson.users).filter((e) => {
-      // console.log('e value', e);
       return e === userName;
     });
     if (
       filterUserName.length > 0 &&
       usersJson.users[userName].password === password
     ) {
-      //props.history.push("test");
       window.localStorage.setItem(
         "user",
         JSON.stringify(usersJson.users[userName])
       );
       console.log("Logged in");
       handleAuth();
-      
     } else {
       alert("Wrong login or password");
     }
   };
 
   return (
-    <div className="login">
+    <div className='login'>
       <Router>
-        <MDBCol size="3">
+        <MDBCol size='3'>
           <form onSubmit={onFormSubmit}>
-            <p className="h5 text-center mb-4">Sign in</p>
-            <div className="grey-text">
+            <p className='h5 text-center mb-4'>Sign in</p>
+            <div className='grey-text'>
               <MDBInput
-                label="Type your email"
-                icon="envelope"
+                label='Type your email'
+                icon='envelope'
                 group
-                type="text"
+                type='text'
                 validate
-                error="wrong"
-                success="right"
+                error='wrong'
+                success='right'
                 getValue={(value) => setUserName(value)}
               />
               <MDBInput
-                label="Type your password"
-                icon="lock"
+                label='Type your password'
+                icon='lock'
                 group
-                type="password"
+                type='password'
                 validate
                 getValue={(value) => setPassword(value)}
               />
             </div>
-            <div className="text-center">
-              <MDBBtn type="submit" onClick={onFormSubmit}>
+            <div className='text-center'>
+              <MDBBtn type='submit' onClick={onFormSubmit}>
                 Login
               </MDBBtn>
             </div>

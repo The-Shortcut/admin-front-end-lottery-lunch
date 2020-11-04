@@ -27,11 +27,15 @@
 .Functionality {
   margin: 20px;
 }
-.emailsContainer{
-margin:10px;
+.emailsContainer {
+  margin: 10px;
   border: 1px solid black;
 }
 .email {
   text-align: center;
-  
+}
+.box {
+  border: 1px solid blueviolet;
+  margin: 15px;
+  padding: 15px;
 }
