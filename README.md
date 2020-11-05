@@ -1,4 +1,4 @@
-This project is for the admin who will be generating pairs, searching and deleting the users. The project ius built using MDB components (https://mdbootstrap.com/docs/react/forms/basic/). The build file of this project can be used with lottery lunch project by chnaging the base url in lottery lunch to `/api`
+This project is for the admin who will be generating pairs, searching and deleting the users. The project is built using MDB components (https://mdbootstrap.com/docs/react/forms/basic/). The build file of this project can be used with lottery lunch project by changing the base url in the Lottery lunch to `/api`
 
 ## Install dependencies
 
