@@ -5,8 +5,8 @@ import Display from "./components/Display";
 import axios from "axios";
 import SearchedItem from "./components/SearchedItem";
 
-//change base url to /api to use build file
-const baseUrl = "http://localhost:4000/api";
+///change base url to /api to use build file
+const baseUrl = "/api"; //run locally using http://localhost:4000/
 
 const Main = () => {
   const [emails, setEmails] = useState([]);
